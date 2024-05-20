@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int coinPoints = 10; //each coin is worth 10 points
+    public int coinPoints = 20; //each coin is worth 10 points
     int coinCount = 1; //used to count number of coins collected
     
 
