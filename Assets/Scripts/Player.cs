@@ -158,11 +158,29 @@ public class Player : MonoBehaviour
     {
         outsideYellowLvl = hint;
     }
-    
+
+    //---------------------IN CLASS ------------------------
+    Interact currentInteractable;
+    public void UpdateInteractable(Interact newInteractable)
+    {
+        currentInteractable = newInteractable;
+    }
+
+    //----------------------------------------------------------
+
 
     //function for interaction
     void OnInteract()
     {
+        //------IN CLASS------------
+        if(currentInteractable != null)
+        {
+            //Interact with object
+            currentInteractable.Interacted();
+        }
+
+        //-------------------------------------------------------------
+
         if (currentDoor != null) //null check if there is a door
         { 
             currentDoor.OpenDoor(); //open door function carries out on referenced door    
