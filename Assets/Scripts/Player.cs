@@ -159,25 +159,11 @@ public class Player : MonoBehaviour
         outsideYellowLvl = hint;
     }
 
-    //---------------------IN CLASS ------------------------
-    Interact currentInteractable;
-    public void UpdateInteractable(Interact newInteractable)
-    {
-        currentInteractable = newInteractable;
-    }
-
-    //----------------------------------------------------------
 
 
     //function for interaction
     void OnInteract()
     {
-        //------IN CLASS------------
-        if(currentInteractable != null)
-        {
-            //Interact with object
-            currentInteractable.Interacted();
-        }
 
         //-------------------------------------------------------------
 
